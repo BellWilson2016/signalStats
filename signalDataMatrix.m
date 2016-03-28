@@ -1,6 +1,12 @@
 %%
 %	signalDataMatrix.m
 %
+%	Utility function for finding group means.
+%
+%	args:
+%		X: Data matrix. Each row is a data point. Columns are variables.
+%		classIX: Vector of integers signifying group membership.
+%
 %%
 function sigMatrix = signalDataMatrix( X, classIX)
 

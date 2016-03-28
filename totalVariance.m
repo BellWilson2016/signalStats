@@ -1,3 +1,14 @@
+%%
+%	totalVariance.m
+%
+%	Calculates the total variance in a data matrix via the scaled frobenius norm.
+%	Also includes test code...
+%
+%	args: 
+%		X: Data matrix. Data points in rows, variables in columns.
+%		arg2: Triggers a test routine.
+%
+%%
 function totVar = totalVariance(X, varargin)
 
 	if nargin > 1

@@ -1,3 +1,16 @@
+%%
+%	signalPCA.m
+%
+%	Code for implementing  'Signal PCA' to find a coordinate rotation that 
+%	maximizes the amount of *explanable variance* in the first PCs. 
+%
+%	args: 
+%		X: Data matrix. Each row is a data point, each column is a dimension (variable).
+%		classIX: Vector with the stimulus # ('class' or 'group') of each data point in X.
+%		nPC: Number of PCs to return.
+%
+%	Outputs: As princomp()
+%%
 function [coeffs,scores,latent,mu,expVar] = signalPCA( X, classIX, nPC)
 
 	% Always center the data
@@ -7,7 +20,7 @@ function [coeffs,scores,latent,mu,expVar] = signalPCA( X, classIX, nPC)
 	debugPlot = false;
 
 	%% 
-	%	Two methods are presented, both should give equivalent values. The c
+	%	Two methods are presented, both should give equivalent values. The
 	%	covariance method seems to be faster, but the SVD method should 
 	%   perform better at very high dimensionalities (> 10000) because the
 	%   covariance matrix doesn't have to be calculated.
