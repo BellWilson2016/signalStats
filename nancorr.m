@@ -1,3 +1,9 @@
+%%
+%	nancorr.m
+%
+%	Correlation matrix protected against NaNs.
+%
+%%
 function nanC = nancorr(X,Y)
 
 	zX = nanZscore(X);

@@ -1,3 +1,9 @@
+%%
+%	logRand.m
+%
+%	Log distributed random numbers.
+%
+%%
 function out = logRand(bottom, top, base)
 
 	lb = log(bottom)/log(base);
